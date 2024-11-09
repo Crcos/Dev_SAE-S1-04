@@ -76,6 +76,7 @@
  /* scrollbar fin*/
 
 /* home*/
+
  .title{
      text-transform: uppercase;
      font-size:60px;
@@ -163,6 +164,91 @@ h1{
     color:#5e493a;
     display: flex;
 }
+/*Sommaire*/
+.sommaire {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.sommaire h2 {
+    margin-bottom: 15px;
+}
+
+.sommaire ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sommaire ul ul {
+    padding-left: 25px;
+}
+
+.sommaire li {
+    margin: 10px 0;
+}
+
+.sommaire a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sommaire a:hover {
+    color: #007bff;
+}
+
+/* Style pour les sections */
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin: 15px 0;
+}
+
+/* Option : Ajout d'une animation douce lors du défilement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Option : Style pour section active */
+section:target {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: #fff3cd;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+/*Sommaire*/
+
+/*Bouton remonter*/
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background: #555;
+}
+/*Bouton remonter*/
 
 /* Footer */
 .footer {
