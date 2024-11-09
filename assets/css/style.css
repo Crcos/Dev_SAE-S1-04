@@ -169,7 +169,7 @@ h1{
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 10em;
 }
 
 .sommaire h2 {
@@ -328,6 +328,7 @@ section:target {
     padding-top: 20px;
     border-top: 1px solid #555;
 }
+/* footer */
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -343,4 +344,36 @@ section:target {
     .footer-github {
         max-width: 80px; /* plus petit sur mobile */
     }
+}
+/* Responsive */
+
+/* pour la mission 1 */
+.contenu{
+    margin: 40px 80px;
+}
+h2{
+    color: #5e493a;
+    text-align: left;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 40px 70px;
+}
+h3{
+    text-align: left;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 40px 10em;
+}
+p {
+    color: #5e493a;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+pre {
+    color: #5e493a;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 2px;
 }

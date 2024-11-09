@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Mission 1</title>
@@ -7,6 +7,7 @@
 
 </head>
 <body>
+
   <!--header -->
   <header>
       <a href="#" class="header_logo"> Kdou. </a>
@@ -40,7 +41,6 @@
         <ul>
           <li><a href="#Analyse">2.1 Analyse clé primaire et étrangère </a></li>
           <li><a href="#Exemple">2.2 Exemple requête</a></li>
-          <li><a href="#Defauts">2.3 Chose a améliorer/ Les défauts </a></li>
         </ul>
       </li>
       <li><a href="#Perspective">3. Perspective</a>
@@ -53,43 +53,69 @@
   <div class="contenu">
     <section id="Contexte">
       <h2>1. Contexte</h2>
-      <p>Contenu de la première partie...</p>
+      <p>
+        L’objectif de cette mission était de prendre en main le sujet et les données fournies par l’entreprise Kdou.
+        Pour cela, un classeur Excel a été mis à notre disposition, avec une feuille par table de base de Données.
+        Ce support nous a permis de répondre à des questions spécifiques de l’entreprise.
+        La base de données est composée de 6 tables :
+        Fournisseur, Produit, Catégorie, Clientèle, Commande, DétailCommande.
+      </p>
     </section>
 
     <section id="Bilan">
       <h2>2. Bilan</h2>
       <div id="Analyse">
         <h3>2.1 Analyse clé primaire et étrangère</h3>
-        <p>Contenu de la sous-partie 1...</p>
+        <p>
+          Analyse des clés primaires : Les données sont structurées en plusieurs tables avec des clés primaires
+          pour chaque table (comme N°Fournisseur pour Fournisseur ou Code Client pour Clientèle)
+          permettant d’identifier chaque entrée de façon unique.
+          Les clés étrangères relient les tables entre elles :
+          par exemple, Produit contient le N°Fournisseur et le Code Catégorie pour lier chaque produit à son fournisseur et sa catégorie.
+          La table Commande utilise le Code Client pour associer une commande à un client,
+          tandis que DetailCommande relie chaque détail de commande à un produit et à une commande grâce aux références Ref produit et N°Commande.
+        </p>
       </div>
       <div id="Exemple">
         <h3>2.2 Exemple requête</h3>
-        <p>Contenu de la sous-partie 2...</p>
-      </div>
-      <div id="Defauts">
-        <h3>2.3 Chose a améliorer/ Les défauts</h3>
-        <p>Contenu de la sous-partie 3...</p>
+        <p>faut ajouter des screen</p>
       </div>
     </section>
 
     <section id="Perspective">
       <h2>3. Perspective d'amélioration</h2>
-      <p>Contenu de la troisième partie...</p>
+        <pre>
+      Nous avons remarqué certains problèmes sur les données de l’entreprise qui pourraient ralentir son développement,
+impactant l’efficacité et la rentabilité de KDou :
+
+  Par exemple : Sao polo et São polo apparaissent comme deux entrées distinctes dans la table des fournisseurs,
+bien qu’il s’agisse de la même ville. Cela résulte en une double entrée pour un même lieu.
+Pour y remédier on pourrait normaliser les données en appliquant des règles d’écriture uniformes et standard.
+
+  De plus on retrouve des incohérences dans les intitulés : Royaume-Uni est écrit deux fois, une fois avec un tiret et une fois sans,
+et les titres de certains postes (ex. : représentante vs. représentant) présentent des variations d’orthographe.
+Pour réagir face à ce problème on pourrait mettre en place un logiciel permettant de détecter et corriger,
+les doublons et fautes d’orthographes.
+
+  Certains codes clients sont référencés sans que le client n’ait passé de commande, comme FRANCK,
+ce qui suggère des erreurs ou des données manquantes.
+Pour y remédier, on pourrait faire en sorte de vérifier les données avant son importation dans la base.
+        </pre>
     </section>
     <section id="Conclusion">
       <h2>4. Conclusion</h2>
-      <p>Contenu de la quatrième partie...</p>
+      <p>
+        L’étude des données révèle une organisation plutôt satisfaisante,
+        mais certains éléments pourraient être plus optimisés pour assurer une meilleure qualité des informations
+        et donc une meilleure performance de l’entreprise.
+        Les solutions suggérées contribueraient à renforcer la fiabilité des informations
+        et à simplifier les requêtes à venir.
+      </p>
     </section>
   </div>
+</div>
 
-
-
-
-
-
-
-
-  <a href="#" class="back-to-top">↑ Remonter vers le haut de page </a>
+<a href="#" class="back-to-top">↑ Remonter vers le haut de page </a>
   <!--footer-->
   <footer class="footer">
     <div class="footer-content">
