@@ -311,6 +311,14 @@ section:target {
     color: #5e493a;
 }
 
+#Thème pre{
+    border-style: groove;
+    border-width: 2px;
+    padding: 5px;
+    border-color: #5e493a;
+    text-align: left;
+}
+
 
 /* Footer */
 .footer {
