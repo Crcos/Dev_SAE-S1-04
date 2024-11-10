@@ -83,11 +83,21 @@
      letter-spacing: 2px;
      color:#5e493a;
      display: flex;
-     justify-content:center; /* Centre horizontalement */
+     justify-content: center; /* Centre horizontalement */
      padding-top: 30vh; /* Décale le titre vers le bas par rapport au haut de la page */
      box-sizing: border-box;
-     height:    100vh;           /* Prend toute la hauteur de la page */
+     height: 50vh;           /* Prend toute la hauteur de la page */
  }
+ .intro{
+     font-size:20px;
+     text-align: center;
+     letter-spacing: 2px;
+     color:#5e493a;
+     display: flex;
+     margin: 50px;
+     padding-bottom: 30vh;
+ }
+
  /* home fin */
 
  /* presentation image*/
@@ -165,7 +175,6 @@ h1{
     display: flex;
 }
 /*Sommaire*/
-
 .sommaire {
     background-color: #f8f9fa;
     padding: 20px;
