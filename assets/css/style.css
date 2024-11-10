@@ -299,6 +299,19 @@ section:target {
     letter-spacing: 2px;
 }
 
+/* mission 3*/
+#Thème h3{
+    font-size: 30px;
+    letter-spacing: 2px;
+    color:#555;
+
+}
+
+#Thème h4{
+    color: #5e493a;
+}
+
+
 /* Footer */
 .footer {
     background-color: #333;
