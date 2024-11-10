@@ -124,7 +124,7 @@
     <section id="Contexte">
       <h2>1. Contexte</h2>
       <p>
-        L'objectif ...
+        L’objectif de cette troisième mission est d’exploiter la base de données de l’entreprise KDou pour produire des analyses et indicateurs pertinents.
       </p>
     </section>
 
@@ -138,7 +138,7 @@
           <div id="2.1.aEnoncé">
             <h4>Enoncé</h4>
             <p>
-              interprétation
+              Quels sont les pays de provenance de ces catégories ?
             </p>
           </div>
           <div id="2.1.aConstruction">
@@ -149,9 +149,11 @@
           </div>
           <div id="2.1.aSQL">
             <h4>SQL</h4>
-            <p>
-              SQL
-            </p>
+            <pre>
+              SELECT DISTINCT Produit.CodeCateg, Fournisseur.Pays
+              FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
+              WHERE (((Produit.CodeCateg)=1 Or (Produit.CodeCateg)=3));
+            </pre>
           </div>
           <div id="2.1.aRésultat">
             <h4>Résultat</h4>
@@ -165,7 +167,7 @@
           <h3> 2ème indicateur</h3>
           <div id="2.1.bEnoncé">
             <h4>Enoncé</h4>
-            <p>Interprétation du 2ème indicateur</p>
+            <p>On veut le chiffre d’affaire généré par catégorie desserts ou catégorie.</p>
           </div>
           <div id="2.1.bConstruction">
             <h4>Construction</h4>
@@ -173,7 +175,12 @@
           </div>
           <div id="2.1.bSQL">
             <h4>SQL</h4>
-            <p>Requête SQL du 2ème indicateur</p>
+            <pre>
+              SELECT Categorie.CodeCateg, Sum(Produit.PrixUnit)AS SommeDePrixUnit
+              FROM Categorie INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
+              GROUP BY Categorie.CodeCateg
+              HAVING (((Categorie.CodeCateg)=1)) Or (((Categorie.CodeCateg)=3));
+            </pre>
           </div>
           <div id="2.1.bRésultat">
             <h4>Résultat</h4>
@@ -195,14 +202,20 @@
           <div id="2.2.aConstruction">
             <h4>Construction</h4>
             <p>
-              const
+              KDou se demande ce qu’il faut changer dans son offre, voici quelques indicateurs ?
+              Donner des informations sur les fournisseurs qui proposent des produits qui ne sont pas
+              commandés actuellement ?
             </p>
           </div>
           <div id="2.2.aSQL">
             <h4>SQL</h4>
-            <p>
-              SQL
-            </p>
+            <pre>
+              SELECT DISTINCT Fournisseur.Contact, Fournisseur.Fonction
+              FROM Produit INNER JOIN Fournisseur ON Produit.NoFour= Fournisseur.NoFour
+              WHERE Produit.RefProd NOT IN (SELECT DetailCommande.RefProd FROM
+              DetailCommande)
+              ORDER BY 1, 2 ;
+            </pre>
           </div>
           <div id="2.2.aRésultat">
             <h4>Résultat</h4>
@@ -216,7 +229,7 @@
           <h3> 2ème indicateur</h3>
           <div id="2.2.bEnoncé">
             <h4>Enoncé</h4>
-            <p>Interprétation du 2ème indicateur</p>
+            <p>Quels sont les pays qui ont une offre importante de produit ?</p>
           </div>
           <div id="2.2.bConstruction">
             <h4>Construction</h4>
@@ -224,7 +237,13 @@
           </div>
           <div id="2.2.bSQL">
             <h4>SQL</h4>
-            <p>Requête SQL du 2ème indicateur</p>
+            <pre>
+              SELECT DISTINCT Fournisseur.Pays, COUNT (Produit.RefProd) AS NbProd
+              FROM Produit
+              INNER JOIN Fournisseur ON Produit.NoFour=Fournisseur.NoFour
+              GROUP BY Fournisseur.Pays
+              ORDER BY 1,2 ;
+            </pre>
           </div>
           <div id="2.2.bRésultat">
             <h4>Résultat</h4>
@@ -241,7 +260,7 @@
           <div id="2.3.aEnoncé">
             <h4>Enoncé</h4>
             <p>
-              interprétation
+              Quels fournisseurs vendent uniquement des boissons ou des desserts ?
             </p>
           </div>
           <div id="2.3.aConstruction">
@@ -252,9 +271,13 @@
           </div>
           <div id="2.3.aSQL">
             <h4>SQL</h4>
-            <p>
-              SQL
-            </p>
+            <pre>
+              SELECT DISTINCT F.Societe
+              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)
+              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg
+              WHERE Ca.NomCateg="Boissons" or Ca.NomCateg= "Desserts"
+              ORDER BY 1;
+            </pre>
           </div>
           <div id="2.3.aRésultat">
             <h4>Résultat</h4>
@@ -269,7 +292,7 @@
           <h3>2ème indicateur</h3>
           <div id="2.3.bEnoncé">
             <h4>Enoncé</h4>
-            <p>Interprétation du 2ème indicateur</p>
+            <p>Y en a-t-il qui vendent les deux boissons et desserts ?</p>
           </div>
           <div id="2.3.bConstruction">
             <h4>Construction</h4>
@@ -277,7 +300,14 @@
           </div>
           <div id="2.3.bSQL">
             <h4>SQL</h4>
-            <p>Requête SQL du 2ème indicateur</p>
+            <pre>
+              SELECT DISTINCT F.Societe
+              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)
+              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg
+              WHERE Ca.NomCateg IN("Boissons","Desserts")
+              GROUP BY F.Societe
+              HAVING COUNT(Ca.NomCateg)=2 ;
+            </pre>
           </div>
           <div id="2.3.bRésultat">
             <h4>Résultat</h4>
@@ -294,7 +324,9 @@
           <div id="2.4.aEnoncé">
             <h4>Enoncé</h4>
             <p>
-              interprétation
+              Un client nantais Le verre à soi souhaite savoir quels autres clients nantais
+              commandent aussi des produits en Allemagne pour envisager de futures livraisons
+              groupées.
             </p>
           </div>
           <div id="2.4.aConstruction">
@@ -305,9 +337,12 @@
           </div>
           <div id="2.4.aSQL">
             <h4>SQL</h4>
-            <p>
-              SQL
-            </p>
+            <pre>
+              SELECT DISTINCT Client.VilleCli, Client.SocieteCli, Fournisseur.Pays
+              FROM Client, Fournisseur
+              WHERE (((Client.VilleCli)="nantes") AND ((Client.SocieteCli)<>"verre de soi") AND
+              ((Fournisseur.Pays)="Allemagne"));
+            </pre>
           </div>
           <div id="2.4.aRésultat">
             <h4>Résultat</h4>
@@ -322,7 +357,7 @@
           <h3>2ème indicateur</h3>
           <div id="2.4.bEnoncé">
             <h4>Enoncé</h4>
-            <p>Interprétation du 2ème indicateur</p>
+            <p>Quels produits n’ont eu que des remises de 10% ou 20%  ou pas de remise ?</p>
           </div>
           <div id="2.4.bConstruction">
             <h4>Construction</h4>
@@ -330,7 +365,17 @@
           </div>
           <div id="2.4.bSQL">
             <h4>SQL</h4>
-            <p>Requête SQL du 2ème indicateur</p>
+            <pre>
+              SELECT DISTINCT Produit.RefProd, Produit.NomProd
+              FROM Produit
+              INNER JOIN DetailCommande ON Produit.RefProd =
+              DetailCommande.RefProd
+              WHERE Produit.RefProd NOT IN (
+              SELECT DetailCommande.RefProd
+              FROM DetailCommande
+              WHERE DetailCommande.Remise NOT IN (0,0.1,0.2))
+              ORDER BY 1,2 ;
+            </pre>
           </div>
           <div id="2.4.bRésultat">
             <h4>Résultat</h4>
