@@ -76,26 +76,35 @@
  /* scrollbar fin*/
 
 /* home*/
-
+.home{
+    background-image: url("../images/pc_fond_web.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: brightness(0.8);
+}
  .title{
      text-transform: uppercase;
-     font-size:60px;
+     font-size:90px;
+     font-family: "playfair display", cursive;
      letter-spacing: 2px;
-     color:#5e493a;
+     color: #5e493a;
      display: flex;
      justify-content: center; /* Centre horizontalement */
-     padding-top: 30vh; /* Décale le titre vers le bas par rapport au haut de la page */
+     padding-top: 40vh; /* Décale le titre vers le bas par rapport au haut de la page */
+     padding-bottom: 50vh;
      box-sizing: border-box;
      height: 50vh;           /* Prend toute la hauteur de la page */
  }
  .intro{
-     font-size:20px;
      text-align: center;
+     font-size:30px;
      letter-spacing: 2px;
      color:#5e493a;
      display: flex;
-     margin: 50px;
-     padding-bottom: 30vh;
+     padding-bottom: 80px;
+     padding-top: 80px;
  }
 
  /* home fin */
@@ -138,7 +147,7 @@
 h1{
     text-align: center;
     text-transform: uppercase;
-    font-size:60px;
+    font-size:50px;
     letter-spacing: 2px;
     color:#5e493a;
     display: flex;
@@ -173,6 +182,7 @@ h1{
     letter-spacing: 2px;
     color:#5e493a;
     display: flex;
+    padding-bottom: 80px;
 }
 /*Sommaire*/
 .sommaire {
