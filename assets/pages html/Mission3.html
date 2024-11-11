@@ -149,14 +149,15 @@
           </div>
           <div id="2.1.aSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT Produit.CodeCateg, Fournisseur.Pays
-              FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
-              WHERE (((Produit.CodeCateg)=1 Or (Produit.CodeCateg)=3));
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT Produit.CodeCateg, Fournisseur.Pays<br>
+              FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour<br>
+              WHERE (((Produit.CodeCateg)=1 Or (Produit.CodeCateg)=3));<br>
+            </div>
           </div>
           <div id="2.1.aRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat1-1.PNG" alt="Résultat 1-1">
             <p>
               résult
             </p>
@@ -175,15 +176,16 @@
           </div>
           <div id="2.1.bSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT Categorie.CodeCateg, Sum(Produit.PrixUnit)AS SommeDePrixUnit
-              FROM Categorie INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
-              GROUP BY Categorie.CodeCateg
-              HAVING (((Categorie.CodeCateg)=1)) Or (((Categorie.CodeCateg)=3));
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT Categorie.CodeCateg, Sum(Produit.PrixUnit)AS SommeDePrixUnit<br>
+              FROM Categorie INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg<br>
+              GROUP BY Categorie.CodeCateg<br>
+              HAVING (((Categorie.CodeCateg)=1)) Or (((Categorie.CodeCateg)=3));<br>
+            </div>
           </div>
           <div id="2.1.bRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat1-2.PNG" alt="Résultat 1-2">
             <p>Résultat du 2ème indicateur</p>
           </div>
         </div>
@@ -209,16 +211,17 @@
           </div>
           <div id="2.2.aSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT Fournisseur.Contact, Fournisseur.Fonction
-              FROM Produit INNER JOIN Fournisseur ON Produit.NoFour= Fournisseur.NoFour
-              WHERE Produit.RefProd NOT IN (SELECT DetailCommande.RefProd FROM
-              DetailCommande)
-              ORDER BY 1, 2 ;
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT Fournisseur.Contact, Fournisseur.Fonction<br>
+              FROM Produit INNER JOIN Fournisseur ON Produit.NoFour= Fournisseur.NoFour<br>
+              WHERE Produit.RefProd NOT IN (SELECT DetailCommande.RefProd FROM<br>
+              DetailCommande)<br>
+              ORDER BY 1, 2 ;<br>
+            </div>
           </div>
           <div id="2.2.aRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat2-1.PNG" alt="Résultat 2-1">
             <p>
               résult
             </p>
@@ -237,16 +240,17 @@
           </div>
           <div id="2.2.bSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT Fournisseur.Pays, COUNT (Produit.RefProd) AS NbProd
-              FROM Produit
-              INNER JOIN Fournisseur ON Produit.NoFour=Fournisseur.NoFour
-              GROUP BY Fournisseur.Pays
-              ORDER BY 1,2 ;
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT Fournisseur.Pays, COUNT (Produit.RefProd) AS NbProd<br>
+              FROM Produit<br>
+              INNER JOIN Fournisseur ON Produit.NoFour=Fournisseur.NoFour<br>
+              GROUP BY Fournisseur.Pays<br>
+              ORDER BY 1,2 ;<br>
+            </div>
           </div>
           <div id="2.2.bRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat2-2.PNG" alt="Résultat 2-2">
             <p>Résultat du 2ème indicateur</p>
           </div>
         </div>
@@ -271,16 +275,17 @@
           </div>
           <div id="2.3.aSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT F.Societe
-              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)
-              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg
-              WHERE Ca.NomCateg="Boissons" or Ca.NomCateg= "Desserts"
-              ORDER BY 1;
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT F.Societe<br>
+              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)<br>
+              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg<br>
+              WHERE Ca.NomCateg="Boissons" or Ca.NomCateg= "Desserts"<br>
+              ORDER BY 1;<br>
+            </div>
           </div>
           <div id="2.3.aRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat3-1.PNG" alt="Résultat 3-1">
             <p>
               résult
             </p>
@@ -300,17 +305,18 @@
           </div>
           <div id="2.3.bSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT F.Societe
-              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)
-              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg
-              WHERE Ca.NomCateg IN("Boissons","Desserts")
-              GROUP BY F.Societe
-              HAVING COUNT(Ca.NomCateg)=2 ;
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT F.Societe<br>
+              FROM (Fournisseur F INNER JOIN Produit P ON F.NoFour=P.NoFour)<br>
+              INNER JOIN Categorie Ca ON Ca.CodeCateg=P.CodeCateg<br>
+              WHERE Ca.NomCateg IN("Boissons","Desserts")<br>
+              GROUP BY F.Societe<br>
+              HAVING COUNT(Ca.NomCateg)=2 ;<br>
+            </div>
           </div>
           <div id="2.3.bRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat3-2.PNG" alt="Résultat 3-2">
             <p>Résultat du 2ème indicateur</p>
           </div>
         </div>
@@ -337,15 +343,16 @@
           </div>
           <div id="2.4.aSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT Client.VilleCli, Client.SocieteCli, Fournisseur.Pays
-              FROM Client, Fournisseur
-              WHERE (((Client.VilleCli)="nantes") AND ((Client.SocieteCli)<>"verre de soi") AND
-              ((Fournisseur.Pays)="Allemagne"));
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT Client.VilleCli, Client.SocieteCli, Fournisseur.Pays<br>
+              FROM Client, Fournisseur<br>
+              WHERE (((Client.VilleCli)="nantes") AND ((Client.SocieteCli)<>"verre de soi") AND<br>
+              ((Fournisseur.Pays)="Allemagne"));<br>
+            </div>
           </div>
           <div id="2.4.aRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat4-1.PNG" alt="Résultat 4-1">
             <p>
               résult
             </p>
@@ -365,20 +372,21 @@
           </div>
           <div id="2.4.bSQL">
             <h4>SQL</h4>
-            <pre>
-              SELECT DISTINCT Produit.RefProd, Produit.NomProd
-              FROM Produit
-              INNER JOIN DetailCommande ON Produit.RefProd =
-              DetailCommande.RefProd
-              WHERE Produit.RefProd NOT IN (
-              SELECT DetailCommande.RefProd
-              FROM DetailCommande
-              WHERE DetailCommande.Remise NOT IN (0,0.1,0.2))
-              ORDER BY 1,2 ;
-            </pre>
+            <div class="div_avec_bordure">
+              SELECT DISTINCT Produit.RefProd, Produit.NomProd<br>
+              FROM Produit<br>
+              INNER JOIN DetailCommande ON Produit.RefProd =<br>
+              DetailCommande.RefProd<br>
+              WHERE Produit.RefProd NOT IN (<br>
+              SELECT DetailCommande.RefProd<br>
+              FROM DetailCommande<br>
+              WHERE DetailCommande.Remise NOT IN (0,0.1,0.2))<br>
+              ORDER BY 1,2 ;<br>
+            </div>
           </div>
           <div id="2.4.bRésultat">
             <h4>Résultat</h4>
+            <img src="../images/mission3/resultat4-2.PNG" alt="Résultat 4-2">
             <p>Résultat du 2ème indicateur</p>
           </div>
         </div>
@@ -387,7 +395,7 @@
   </div>
 
 
-
+  <a href="#" class="back-to-top">↑ Remonter vers le haut de page </a>
   <!--footer-->
   <footer class="footer">
     <div class="footer-content">
