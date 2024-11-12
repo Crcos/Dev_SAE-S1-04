@@ -177,7 +177,7 @@ h1{
     align-items: center;
     justify-content: center;
 }
-.p_presentation{
+.p_presentation span{
     text-align: center;
     font-size:30px;
     letter-spacing: 2px;
@@ -285,6 +285,39 @@ section:target {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 40px 70px;
+}
+/* exemple table*/
+#Exemple table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#Exemple table thead th{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+#Exemple table tbody td{
+    color: #5e493a;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+#Exemple table tbody td:hover{ /* quand on pose la souris ca change de couleur */
+    color: #333333;
+}
+#Exemple table tr, table td{
+    border-collapse: collapse;
+    border: 1px solid #000;
+    padding: 8px;
 }
 #Bilan h3{
     color: #555;
