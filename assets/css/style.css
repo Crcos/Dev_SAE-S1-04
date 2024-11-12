@@ -311,7 +311,16 @@ section:target {
     font-size: 20px;
     letter-spacing: 2px;
 }
+/*mission 1 */
 
+/*mission 2 */
+#indicateur pre{
+    border-style: groove;
+    border-width: 2px;
+    padding: 5px;
+    border-color: #5e493a;
+    text-align: left;
+}
 /* mission 3*/
 #Thème h3{
     font-size: 30px;
@@ -324,14 +333,20 @@ section:target {
     color: #5e493a;
 }
 
-#Thème pre{
-    border-style: groove;
-    border-width: 2px;
-    padding: 5px;
-    border-color: #5e493a;
-    text-align: left;
+#Thème .div_avec_bordure{
+    display: inline-block;
+    border: 2px solid #5e493a;
+    width: 35%;
+    padding: 10px;
+    max-width: fit-content;
 }
-
+#Thème img{
+    width:50%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+/* mission 3*/
 
 /* Footer */
 .footer {
@@ -420,6 +435,10 @@ section:target {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    #Thème .div_avec_bordure{
+        width: 75%;
+    }
     .footer-section {
         min-width: 100%;
         text-align: center;
@@ -431,5 +450,11 @@ section:target {
     }
     .footer-github {
         max-width: 80px; /* plus petit sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #Thème .div_avec_bordure{
+        width: 100%;
     }
 }

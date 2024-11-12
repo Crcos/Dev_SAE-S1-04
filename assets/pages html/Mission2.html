@@ -35,30 +35,30 @@
       <li><a href="#Contexte">1. Contexte </a> </li>
       <li><a href="#1er Indicateur intéressant">2. 1er Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#1er Interprétation">2.1  Interprétation </a></li>
-          <li><a href="#1er resultat">2.2 Résultat </a></li>
+          <li><a href="#1er Interprétation">2.1 Énoncé/Interprétation</a></li>
+          <li><a href="#1er resultat">2.2 Résultat</a></li>
           <li><a href="#1er QBE/SQL">2.3 QBE/SQL</a></li>
         </ul>
       </li>
       <li><a href="#2ème Indicateur intéressant">3. 2ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#2ème Interprétation">3.1  Interprétation </a></li>
-          <li><a href="#2ème resultat">3.2  Résultat </a></li>
-          <li><a href="#2ème QBE/SQL">3.3  QBE/SQL</a></li>
+          <li><a href="#2ème Interprétation">3.1 Énoncé/Interprétation</a></li>
+          <li><a href="#2ème resultat">3.2 Résultat</a></li>
+          <li><a href="#2ème QBE/SQL">3.1 QBE/SQL</a></li>
         </ul>
       </li>
       <li><a href="#3ème Indicateur intéressant">4. 3ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#3ème Interprétation">4.1   Interprétation </a></li>
-          <li><a href="#3ème resultat">4.2  Résultat </a></li>
-          <li><a href="#3ème QBE/SQL">4.3  QBE/SQL</a></li>
+          <li><a href="#3ème Interprétation">4.1 Énoncé/Interprétation</a></li>
+          <li><a href="#3ème resultat">4.2 Résultat</a></li>
+          <li><a href="#3ème QBE/SQL">4.3 QBE/SQL</a></li>
         </ul>
       </li>
       <li><a href="#4ème Indicateur intéressant">5. 4ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#4ème Interprétation">5.1  Interprétation </a></li>
-          <li><a href="#4ème resultat">5.2  Résultat </a></li>
-          <li><a href="#4ème QBE/SQL">5.3  QBE/SQL</a></li>
+          <li><a href="#4ème Interprétation">5.1 Énoncé/Interprétation</a></li>
+          <li><a href="#4ème resultat">5.2 Résultat</a></li>
+          <li><a href="#4ème QBE/SQL">5.3 QBE/SQL</a></li>
         </ul>
       </li>
     </ul>
@@ -69,96 +69,122 @@
     <section id="Contexte">
       <h2>1. Contexte</h2>
       <p>
-      Bonjour
+        L'objectif de cette mission est d'exploiter la base de données de l'entreprise KDou à travers une interface low code
+        , ici le QBE. En effet cet outil permet de générer des requêtes en SQL via une interface et des moyens plus simplifiés,
+        qui ne nécessite pas l'apprentissage du langage. Cette alternative peut constituer une aide, mais en aucun cas un moyen
+        sur lequel on peut se reposer uniquement.
       </p>
     </section>
-
+    <section id="indicateur">
     <section id="1er Indicateur intéressant">
       <h2> 2. 1er Indicateur intéressant pour KDou</h2>
       <div id="1er Interprétation">
-        <h3>2.1 Interprétation</h3>
+        <h3>2.1 Énoncé/Interprétation</h3>
         <p>
-          1er interprétation
+          Quels sont les produits d’Italie ou d’Allemagne vendus 50€ ou
+          moins? On veut connaitre leurs: noms, prix, nom du fournisseur, ville et pays
+          d’origine.<br>Cette requête permet à l’entreprise de comparer rapidement une gamme de produit selon le pays et le prix de ces derniers.
         </p>
       </div>
       <div id="1er resultat">
         <h3>2.2 Résultat</h3>
-        <p>
-          1er résultat
-        </p>
+        <div class="res1_mission2"><img src="../images/1er_Résultat_Mission2.jpg" alt ="res1_mission2"></div>
       </div>
       <div id="1er QBE/SQL">
         <h3>2.3 QBE/SQL</h3>
-        <p>
-          1er QBE/SQL
-        </p>
+        <pre>
+          <br> <br>SELECT Fournisseur.Pays, Fournisseur.Contact, Fournisseur.Ville, Produit.PrixUnit, Produit.NomProd
+          <br>FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
+          <br>WHERE (((Fournisseur.Pays) Like "*Itaile*") AND ((Produit.PrixUnit<=50)) OR ((Fournisseur.Pays) Like "*Allemagne*") AND ((Produit.PrixUnit)<= 50));
+        </pre>
       </div>
     </section>
 
     <section id="2ème Indicateur intéressant">
       <h2> 3. 2ème Indicateur intéressant pour KDou</h2>
       <div id="2ème Interprétation">
-        <h3>3.1 Interprétation</h3>
+        <h3>3.1 Énoncé/Interprétation</h3>
         <p>
-          2ème interprétation
+          Combien y a-t-il de clients nantais ? <br>
+          Cette requête peut permettre à l’entreprise de comprendre qu’il faut booster leur communication
+          dans la ville de Nantes car il y a trop peu de clients, cela peut aussi être résolu par un système
+          de fidélisation client plus élaboré. Mais aussi, elle peut permettre de mettre en critère n’importe
+          quelle autre ville et analyser son influence dans cette dernière.
         </p>
       </div>
       <div id="2ème resultat">
         <h3>3.2 Résultat</h3>
         <p>
-          2ème résultat
+         Résultat à mettre sous forme de tableau: une colonne pour la VilleCli et une pour le COUNT.
+          Dans la colonne VilleCli on a que une case qui est "Nantes" et dans la colonne COUNT
+          on a que une case avec le chiffre "3".
         </p>
       </div>
       <div id="2ème QBE/SQL">
         <h3>3.3 QBE/SQL</h3>
-        <p>
-          2ème QBE/SQL
-        </p>
+        <pre>
+          <br><br>SELECT Count(Client.ContactCli) AS CompteDeContactCli, Client.VilleCli
+          <br>FROM Client
+          <br>GROUP BY Client.VilleCli
+          <br>HAVING (((Client.VilleCli) Like "*Nantes*"));
+
+        </pre>
       </div>
     </section>
 
     <section id="3ème Indicateur intéressant">
       <h2> 4. 3ème Indicateur intéressant pour KDou</h2>
       <div id="3ème Interprétation">
-        <h3>4.1 Interprétation</h3>
+        <h3>4.1 Énoncé/Interprétation</h3>
         <p>
-          3ème interprétation
+          Est-ce qu’il y a dans la clientèle des clients qui n’ont pas encore passé de commande ?.<br>
+          Cette requête permet d'identifier les clients n'ayant pas encore passé de commande, une information
+          clé pour cibler des actions marketing et commerciales spécifiques. L'entreprise pourrait ainsi
+          relancer ces clients potentiels, comprendre les raisons de leur inactivité et améliorer la fidélisation.
+
         </p>
       </div>
       <div id="3ème resultat">
         <h3>4.2 Résultat</h3>
         <p>
-          3ème résultat
+          Faire un tableau qui est composé de 4 colonnes : CodeCli, SocietCli, ContactCli, AdresseCli.
+          Voir l'image enregistrée dans le webstorm qui s'appelle "3e_Résultat_mission2"
         </p>
       </div>
       <div id="3ème QBE/SQL">
         <h3>4.3 QBE/SQL</h3>
-        <p>
-          3ème QBE/SQL
-        </p>
+        <pre>
+          <br><br>SELECT Client.CodeCli, Client.SocieteCli, Client.ContactCli, Client.AdresseCli
+          <br>FROM Client
+          <br>WHERE Client.CodeCli NOT IN (SELECT CodeCli FROM Commande)
+        </pre>
       </div>
     </section>
 
     <section id="4ème Indicateur intéressant">
       <h2> 5. 4ème Indicateur intéressant pour KDou</h2>
       <div id="4ème Interprétation">
-        <h3>5.1 Interprétation</h3>
+        <h3>5.1 Énoncé/Interprétation</h3>
         <p>
-          4ème interprétation
+          Dans quelles villes la clientèle est-elle la plus importante ? Citer les 3 premières. <br>
+          Cette requête permet d'identifier les 3 villes où l'entreprise a le plus de clients.
+          Cette information peut être utile pour cibler les efforts marketing et commerciaux
+          dans ces zones géographiques clés. L'entreprise pourrait ainsi concentrer ses ressources
+          là où la demande est la plus importante, optimiser la logistique et la distribution, et mieux
+          répondre aux besoins spécifiques de ces clients. En complément, il serait intéressant d'analyser
+          d'autres informations telles que le chiffre d'affaires ou la marge par ville, afin d'avoir
+          une vision plus complète de l'importance stratégique de chaque zone géographique.
         </p>
       </div>
       <div id="4ème resultat">
         <h3>5.2 Résultat</h3>
-        <p>
-          4ème résultat
-        </p>
+        <div class="res4_Mission2"><img src="../images/4e_Résultat_Mission2.jpg" alt ="QBE4_mission2"></div>
       </div>
       <div id="4ème QBE/SQL">
         <h3>5.3 QBE/SQL</h3>
-        <p>
-          4ème QBE/SQL
-        </p>
+        <div class="QBE4_mission2"><img src="../images/4e_QBE_Mission2.jpg" alt ="QBE4_mission2"></div>
       </div>
+    </section>
     </section>
   </div>
 
