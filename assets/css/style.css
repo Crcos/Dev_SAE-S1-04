@@ -22,26 +22,36 @@
      text-decoration: none;
      color: #000;
      font-weight:400;
-     font-size: 14px;
      letter-spacing: 2px;
      text-transform: uppercase;
  }
- ul{
+ nav{
      list-style: none;
  }
  header{
      display: flex;
      align-items: center;
      justify-content: space-between;
-     margin: 0 8%;
-     padding: 20px 0;
+     margin: 0;
+     padding: 22px 5%;
      border-bottom: 1px solid #000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 1000;
+     box-sizing: border-box;
+     background-color: rgb(221,221,221, 0.9) ;
+     overflow-x: hidden;
  }
  .header_logo{
+     font-size: 20px;
      font-weight: 500;
  }
  .header_menu{
+     top: 100%;
      display: flex;
+     font-size: 16px;
  }
  .header_menu a{
      margin-left: 20px;
@@ -58,8 +68,12 @@
      background-color:#000;
      transition: 0.5s ease-out;
  }
+
  .header_menu a:hover:after{
      width:100%;
+ }
+ .header_buttons{
+     font-size: 20px;
  }
  .header_buttons a{
      margin-left:20px;
@@ -77,6 +91,7 @@
 
 /* home*/
 .home{
+    margin:0;
     background-image: url("../images/pc_fond_web.jpg");
     background-size: cover;
     background-position: center;
@@ -471,6 +486,17 @@ section:target {
 
 }
 @media (max-width: 768px) {
+    nav{
+        position: absolute;
+    }
+    .header_menu {
+        position: absolute ;
+        right:0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff3cd;
+    }
 
     #Thème .div_avec_bordure{
         width: 75%;
