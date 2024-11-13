@@ -54,7 +54,7 @@
     <section id="Contexte">
       <h2>1. Contexte</h2>
       <p>
-        L’objectif de cette mission était de prendre en main le sujet et les données fournies par l’entreprise Kdou.
+        L’objectif de cette mission est de prendre en main le sujet et les données fournies par l’entreprise Kdou.
         Pour cela, un classeur Excel a été mis à notre disposition, avec une feuille par table de base de Données.
         Ce support nous a permis de répondre à des questions spécifiques de l’entreprise.
         La base de données est composée de 6 tables :
@@ -67,6 +67,7 @@
       <div id="Analyse">
         <h3>2.1 Analyse clé primaire et étrangère</h3>
         <p>
+
           Analyse des clés primaires : Les données sont structurées en plusieurs tables avec des clés primaires
           pour chaque table (comme N°Fournisseur pour Fournisseur ou Code Client pour Clientèle)
           permettant d’identifier chaque entrée de façon unique.
@@ -74,23 +75,22 @@
           par exemple, Produit contient le N°Fournisseur et le Code Catégorie pour lier chaque produit à son fournisseur et sa catégorie.
           La table Commande utilise le Code Client pour associer une commande à un client,
           tandis que DetailCommande relie chaque détail de commande à un produit et à une commande grâce aux références Ref produit et N°Commande.
+
+
         </p>
       </div>
       <div id="Exemple">
         <h3>2.2 Exemple requête</h3>
-        <div class="ex1_mission1"><img src="../images/exemple1.png" alt ="exemple1"></div>
-        <div class="ex2_mission1"><img src="../images/exemple2.png" alt ="exemple2"></div>
-        <span> REQUETE : Combien y a-t-il de clients de région parisienne ?
-Il y a 3 clients de région parisienne</span>
+        <span> REQUETE : Combien y a-t-il de clients de région parisienne ? Il y a 3 clients de région parisienne</span>
         <table class="tab1">
           <thead>
-            <tr>
-              <th> Code Client </th>
-              <th> Société </th>
-              <th> Contact </th>
-              <th> Ville </th>
-              <th> Pays </th>
-            </tr>
+          <tr>
+            <th> Code Client </th>
+            <th> Société </th>
+            <th> Contact </th>
+            <th> Ville </th>
+            <th> Pays </th>
+          </tr>
           </thead>
           <tbody>
           <tr>
@@ -115,9 +115,44 @@ Il y a 3 clients de région parisienne</span>
             <td>France</td>
           </tr>
           </tbody>
-
+        </table>
+        <span> REQUETE: Combien y a t-il de  clients nantais? </span>
+        <table class="tab1">
+          <thead>
+          <tr>
+            <th> Code Client </th>
+            <th> Société </th>
+            <th> Contact </th>
+            <th> Ville </th>
+            <th> Pays </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>COMMI</td>
+            <td>Pedro's house</td>
+            <td>Pedro Afonso</td>
+            <td>Nantes</td>
+            <td>France</td>
+          </tr>
+          <tr>
+            <td>DRACD</td>
+            <td>Table nantaise</td>
+            <td>Sven Ottlieb</td>
+            <td>Nantes</td>
+            <td>France</td>
+          </tr>
+          <tr>
+            <td>FURIB</td>
+            <td>Verre à soi</td>
+            <td>Lino Rodriguez</td>
+            <td>Nantes</td>
+            <td>France</td>
+          </tr>
+          </tbody>
         </table>
       </div>
+
     </section>
 
     <section id="Perspective">
@@ -143,11 +178,13 @@ Pour y remédier, on pourrait faire en sorte de vérifier les données avant son
     <section id="Conclusion">
       <h2>4. Conclusion</h2>
       <p>
-        L’étude des données révèle une organisation plutôt satisfaisante,
-        mais certains éléments pourraient être plus optimisés pour assurer une meilleure qualité des informations
-        et donc une meilleure performance de l’entreprise.
-        Les solutions suggérées contribueraient à renforcer la fiabilité des informations
-        et à simplifier les requêtes à venir.
+        L’étude de données révèle une organisation assez satisfaisante.
+        La plupart des requetes demandées par l'entreprise KDOu ont pu être
+        réalisé avec succès.
+        Cependant, certains éléments de la base de données, pourraient être plus optimisés afin d'assurer une meilleure qualité de l'information
+        et donc une meilleure performance de l’entreprise. En effet, le filtrage des colonnes est efficace, mais reste limité.
+        ACCESS n'est peut etre pas le meilleur outil pour ce type de requête. Nous suggerons plutot l'utilisation d'EXCEL, qui
+        est un outil similaire mais plus précis encore, avec l'usage de langage tel que SQL et QBE.
       </p>
     </section>
   </div>
