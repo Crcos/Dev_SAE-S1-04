@@ -482,31 +482,55 @@ section:target {
 
 
 /* Responsive */
-@media screen and (max-width: 900px){
-
-}
-@media (max-width: 768px) {
-    nav{
-        position: absolute;
-    }
+@media screen and (max-width: 900px) {
     .header_menu {
-        position: absolute ;
-        right:0;
-        top: 0;
-        display: flex;
         flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
         background: #fff3cd;
     }
+    .header_buttons {
+        font-size: 16px;
+    }
+    .title {
+        font-size: 60px;
+    }
+    .intro {
+        font-size: 24px;
+    }
+    .team {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les écrans moyens */
+    }
+}
 
-    #Thème .div_avec_bordure{
-        width: 75%;
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        width: 100%;
+    }
+    .header_menu a {
+        margin-left: 0;
+        padding: 10px; /* Ajout de padding pour de meilleures cibles tactiles */
+    }
+    .title {
+        font-size: 40px;
+        padding-top: 20vh;
+        padding-bottom: 30vh;
+    }
+    .intro {
+        font-size: 20px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+    #Thème .div_avec_bordure {
+        width: 80%;
     }
     .footer-section {
         min-width: 100%;
         text-align: center;
-        margin: 10px;
+        margin: 10px 0;
     }
-
     .footer-content {
         flex-direction: column;
     }
@@ -516,7 +540,22 @@ section:target {
 }
 
 @media (max-width: 480px) {
-    #Thème .div_avec_bordure{
+    .title {
+        font-size: 30px;
+        padding-top: 15vh;
+        padding-bottom: 20vh;
+    }
+    .intro {
+        font-size: 18px;
+        padding: 20px;
+    }
+    #Thème .div_avec_bordure {
         width: 100%;
+    }
+    .team {
+        grid-template-columns: 1fr; /* 1 colonne sur les petits écrans */
+    }
+    .contenu {
+        margin: 20px 10px; /* Ajuster les marges pour les petits appareils */
     }
 }
