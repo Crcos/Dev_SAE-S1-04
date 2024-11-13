@@ -419,7 +419,7 @@ section:target {
     font-weight: bold;
 
 }
-[id="3ème resultat"] table tbody td:hover{ /* quand on passe la souris ça change de couleur */
+[id="3ème resultat"] table tbody td:hover{ /* quand on passe la souris ça change de couleur. */
     color: #333333;
 }
 [id="3ème resultat"] table tr, table td{
