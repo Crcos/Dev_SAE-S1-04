@@ -16,8 +16,8 @@
         <a href="Mission1.html">mission1</a>
         <a href="Mission2.html">mission2</a>
         <a href="Mission3.html">mission3</a>
+        <a href="Mission4.html">mission4</a>
       </nav>
-
       <div class="header_buttons">
         <a href="https://moodle.u-paris.fr/">Sign in</a>
       </div>
@@ -39,8 +39,7 @@
       <li><a href="#Contexte">1. Contexte </a> </li>
       <li><a href="#Bilan">2. Bilan</a>
         <ul>
-          <li><a href="#Analyse">2.1 Analyse clé primaire et étrangère </a></li>
-          <li><a href="#Exemple">2.2 Exemple requête</a></li>
+          <li><a href="#Exemple">2.1 Exemple requête</a></li>
         </ul>
       </li>
       <li><a href="#Perspective">3. Perspective</a>
@@ -48,8 +47,7 @@
 
     </ul>
   </div>
-
-  <!-- Contenu du Sommaire -->
+  <!-- Contenu -->
   <div class="contenu">
     <section id="Contexte">
       <h2>1. Contexte</h2>
@@ -65,8 +63,9 @@
     <section id="Bilan">
       <h2>2. Bilan</h2>
       <div id="Analyse">
-        <h3>2.1 Analyse clé primaire et étrangère</h3>
         <p>
+          La mission est divisé en 3 parties. Dans une première partie, nous effectuons une analyse des clés primaires, puis secondaires
+          et enfin nous finissons par la réalisation de requêtes sur le fichier EXCEL.
 
           Analyse des clés primaires : Les données sont structurées en plusieurs tables avec des clés primaires
           pour chaque table (comme N°Fournisseur pour Fournisseur ou Code Client pour Clientèle)
@@ -81,7 +80,10 @@
       </div>
       <div id="Exemple">
         <h3>2.2 Exemple requête</h3>
-        <span> REQUETE : Combien y a-t-il de clients de région parisienne ? Il y a 3 clients de région parisienne</span>
+        <p> Afin d'obtenir une information précise, nous avons apppliqué des filtres, pour réduire les tables à la réponse souhaité.
+          Voici quelques exemples de requêtes:<br></p>
+
+        <span> REQUETE : Combien y a-t-il de clients de région parisienne ? Réponse : Il y a 3 clients de région parisienne <br></span>
         <table class="tab1">
           <thead>
           <tr>
@@ -116,48 +118,20 @@
           </tr>
           </tbody>
         </table>
-        <span> REQUETE: Combien y a t-il de  clients nantais? </span>
-        <table class="tab1">
-          <thead>
-          <tr>
-            <th> Code Client </th>
-            <th> Société </th>
-            <th> Contact </th>
-            <th> Ville </th>
-            <th> Pays </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>COMMI</td>
-            <td>Pedro's house</td>
-            <td>Pedro Afonso</td>
-            <td>Nantes</td>
-            <td>France</td>
-          </tr>
-          <tr>
-            <td>DRACD</td>
-            <td>Table nantaise</td>
-            <td>Sven Ottlieb</td>
-            <td>Nantes</td>
-            <td>France</td>
-          </tr>
-          <tr>
-            <td>FURIB</td>
-            <td>Verre à soi</td>
-            <td>Lino Rodriguez</td>
-            <td>Nantes</td>
-            <td>France</td>
-          </tr>
-          </tbody>
-        </table>
+        <span> REQUETE: Combien y a-t-il de pays dans l’UE autre que la France ? Réponse: il y en a 7.<br></span>
+        <p>
+          Cet exemple illustre bien les limites de la méthode de filtrage. Tout d'abord, EXCEL ne permet pas de compter directement les lignes,
+          ce qui nous oblige à faire un décompte manuel des pays, alors que le fichier est censé faciliter la lecture des données.
+          De plus, pour sélectionner les pays de l'UE, chaque pays a dû être choisi individuellement, une manipulation qui augmente
+          le risque d'erreurs par rapport à une requête "automatisée" dans une base de données.
+        </p>
       </div>
 
     </section>
 
     <section id="Perspective">
       <h2>3. Perspective d'amélioration</h2>
-        <pre>
+        <p>
       Nous avons remarqué certains problèmes sur les données de l’entreprise qui pourraient ralentir son développement,
 impactant l’efficacité et la rentabilité de KDou :
 
@@ -173,7 +147,7 @@ les doublons et fautes d’orthographes.
   Certains codes clients sont référencés sans que le client n’ait passé de commande, comme FRANCK,
 ce qui suggère des erreurs ou des données manquantes.
 Pour y remédier, on pourrait faire en sorte de vérifier les données avant son importation dans la base.
-        </pre>
+        </p>
     </section>
     <section id="Conclusion">
       <h2>4. Conclusion</h2>
@@ -183,7 +157,7 @@ Pour y remédier, on pourrait faire en sorte de vérifier les données avant son
         réalisé avec succès.
         Cependant, certains éléments de la base de données, pourraient être plus optimisés afin d'assurer une meilleure qualité de l'information
         et donc une meilleure performance de l’entreprise. En effet, le filtrage des colonnes est efficace, mais reste limité.
-        ACCESS n'est peut etre pas le meilleur outil pour ce type de requête. Nous suggerons plutot l'utilisation d'EXCEL, qui
+        EXCEL n'est peut etre pas le meilleur outil pour ce type de requête. Nous suggerons plutot l'utilisation d'ACCESS, qui
         est un outil similaire mais plus précis encore, avec l'usage de langage tel que SQL et QBE.
       </p>
     </section>
