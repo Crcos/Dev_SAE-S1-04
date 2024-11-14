@@ -95,9 +95,13 @@
       <div id="1er QBE/SQL">
         <h3>2.3 QBE/SQL</h3>
         <pre>
-          <br> <br>SELECT Fournisseur.Pays, Fournisseur.Contact, Fournisseur.Ville, Produit.PrixUnit, Produit.NomProd
-          <br>FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
-          <br>WHERE (((Fournisseur.Pays) Like "*Itaile*") AND ((Produit.PrixUnit<=50)) OR ((Fournisseur.Pays) Like "*Allemagne*") AND ((Produit.PrixUnit)<= 50));
+          <br> <br>SELECT Fournisseur.Pays, Fournisseur.Contact,<br>
+          Fournisseur.Ville, Produit.PrixUnit, Produit.NomProd
+          <br>FROM Fournisseur INNER JOIN Produit <br>
+          ON Fournisseur.NoFour = Produit.NoFour
+          <br>WHERE (((Fournisseur.Pays) Like "*Itaile*") <br>
+          AND ((Produit.PrixUnit<=50)) OR ((Fournisseur.Pays) <br>
+          Like "*Allemagne*") AND ((Produit.PrixUnit)<= 50));
         </pre>
       </div>
     </section>
@@ -139,7 +143,8 @@
       <div id="2ème QBE/SQL">
         <h3>3.3 QBE/SQL</h3>
         <pre>
-          <br><br>SELECT Count(Client.ContactCli) AS CompteDeContactCli, Client.VilleCli
+          <br><br>SELECT Count(Client.ContactCli) AS CompteDeContactCli,<br>
+          Client.VilleCli
           <br>FROM Client
           <br>GROUP BY Client.VilleCli
           <br>HAVING (((Client.VilleCli) Like "*Nantes*"));
@@ -190,9 +195,11 @@
       <div id="3ème QBE/SQL">
         <h3>4.3 QBE/SQL</h3>
         <pre>
-          <br><br>SELECT Client.CodeCli, Client.SocieteCli, Client.ContactCli, Client.AdresseCli
+          <br><br>SELECT Client.CodeCli, Client.SocieteCli,
+          <br>Client.ContactCli,Client.AdresseCli
           <br>FROM Client
-          <br>WHERE Client.CodeCli NOT IN (SELECT CodeCli FROM Commande)
+          <br>WHERE Client.CodeCli NOT IN
+          <br>(SELECT CodeCli FROM Commande)
         </pre>
       </div>
     </section>

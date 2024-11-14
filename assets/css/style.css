@@ -413,11 +413,11 @@ section:target {
 
 /*mission 2 */
 #indicateur pre{
-    border-style: groove;
-    border-width: 2px;
-    padding: 5px;
-    border-color: #5e493a;
-    text-align: left;
+    display: inline-block;
+    border: 2px solid #5e493a;
+    width: 35%;
+    padding: 10px;
+    max-width: fit-content;
 }
 [id="2ème_resultat"] table{
     width: 25%;
@@ -507,6 +507,7 @@ section:target {
     padding: 8px;
 }
 /* mission 2*/
+
 /* mission 3*/
 #Thème h3{
     font-size: 30px;
