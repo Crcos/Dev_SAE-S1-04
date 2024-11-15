@@ -524,7 +524,7 @@ section:target {
     color: #5e493a;
 }
 
-#Thème .div_avec_bordure{
+ .div_avec_bordure{
     display: inline-block;
     border: 2px solid #5e493a;
     width: auto;
