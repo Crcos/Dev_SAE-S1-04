@@ -752,3 +752,6 @@ section:target {
 .contenu ul li {
     margin-bottom: 20px;
 }
+.contenu ul h3 {
+    margin-bottom: 10px;
+}

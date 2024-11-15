@@ -70,21 +70,62 @@
             Une bonne utilisation des tableaux en HTML requiert 2 exigences : une bonne structuration, un style adapté.
         </p>
         <ul>
-            <li>
+            <li><h3>Structuration</h3>
                 Quand il s'agit de la bonne structuration nous avons décidé d'employer plusieurs structures sémantiques
                 présentes dans le langage HTML, comme par exemple les balises &lt;thead&gt; et &lt;tbody&gt;. Ces balises
                 permettent de structurer un tableau de manière claire et compréhensible, aussi bien pour les développeurs que pour
                 les outils comme les lecteurs d'écran.
             </li>
-            <li> D'autre part, pour rendre nos tableaux plus esthétiques et en conformité avec notre page web, nous avons
+            <li> <h3>Style</h3>
+                D'autre part, pour rendre nos tableaux plus esthétiques et en conformité avec notre page web, nous avons
                 appliqué différents styles à ces derniers. Cela s'est fait par le biais d'une page CSS dans laquelle nous
                 avons inclus différentes propriétés telles que : « font-size: 20px ;» qui nous permettait de gérer la taille
                 des tableaux ou encore « border-collapse: collapse; » qui permet de fusionner les bordures des cellules
                 adjacentes du tableau et même « table tbody td:hover { color: #333333; } » qui permet de changer la couleur
-                des cases contenu dans notre &lt;tbody&gt; , lorsqu'elles sont survolées par la souris de l'utilisateur.</li>
+                des cases contenu dans notre &lt;tbody&gt; , lorsqu'elles sont survolées par la souris de l'utilisateur.
+            </li>
 
         </ul>
-
+    </section>
+    <section id="Autres">
+        <h2>4. Autres fonctionnalitées </h2>
+            <p>
+                Pour ce premier site internet, nous avons intégré des fonctionnalités supplémentaires afin d'améliorer
+                la navigation et l'organisation du contenu. Ces ajouts ont pour objectif de rendre le site plus intuitif
+                et agréable à utiliser, tout en nous permettant de mettre en pratique nos compétences en HTML et CSS.
+                Ces choix reflètent notre volonté, de permettre aux utilisateurs une utilisation simple et efficace,
+                tout en respectant les bonnes pratiques de conception web.
+            </p>
+            <ul>
+                <li><h3>Notre Footer</h3>
+                    Dans notre projet de site web, nous avons intégré un footer pour fournir des informations essentielles
+                    tout en gardant un design épuré. Le footer est divisé en trois sections principales : "À propos",
+                    "Contact", et "Suivez-nous". <br><br>
+                    La section "À propos" présente une brève description de notre équipe, composée de 4 étudiants en
+                    BUT 1 Informatique. Nous utilisons une balise &lt;h3&gt; pour le titre et une balise &lt;p&gt;
+                    pour le texte descriptif.<br><br>
+                    Ensuite, la section "Contact" contient des informations pratiques, comme l'email du professeur
+                    et l'adresse physique, également présentées dans des balises  &lt;p&gt;. Cela permet une lecture facile et rapide.<br><br>
+                    Enfin, dans "Suivez-nous", nous avons ajouté des liens vers des réseaux sociaux et des icônes cliquables,
+                    ce qui permet à l'utilisateur de se connecter facilement avec nous.<br><br>
+                    Enfin, le footer se termine par un message de copyright, signalant les droits réservés à notre projet.
+                    Cela garantit un aspect professionnel tout en étant simple et fonctionnel.</li>
+            <li><h3>Notre Navbar</h3>
+                Dans notre projet, la navbar se compose de plusieurs éléments principaux : le logo, le menu de navigation,
+                et le bouton "Sign in".
+                Le logo est un lien vers la page d'accueil, offrant un accès rapide au site.
+                Le menu de navigation contient des liens vers différentes missions, permettant une navigation facile entre
+                les pages du site.
+                Enfin, le bouton "Sign in" renvoie à Moodle, offrant un accès direct à la plateforme de l'IUT.<br><br>
+                En ce qui concerne le style, nous avons appliqué des règles CSS pour améliorer l'interactivité et la présentation.
+                Par exemple, nous avons utilisé position: absolute; pour positionner certains éléments par rapport à leur conteneur.
+                Avec left: 0; et bottom: -2px;, nous avons ajusté l'emplacement d'une ligne décorative sous les liens du menu de
+                navigation. La ligne, créée avec content: ""; et height: 1px; width: 0;, commence avec une largeur de 0 et s'étend
+                lors du survol des éléments. Elle est colorée en noir grâce à background-color: #000;. L'effet de transition,
+                transition: 0.5s ease-out;, assure que cette animation se fait en douceur lorsque l'utilisateur interagit avec
+                la navbar, offrant une expérience fluide et agréable.
+            </li>
+            </ul>
     </section>
 </div>
 
