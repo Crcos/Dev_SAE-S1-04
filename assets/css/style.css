@@ -747,4 +747,8 @@ section:target {
     font-size: 20px;
     letter-spacing: 2px;
     margin: 40px 70px;
+
+}
+.contenu ul li {
+    margin-bottom: 20px;
 }
