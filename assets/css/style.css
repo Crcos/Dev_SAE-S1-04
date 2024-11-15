@@ -411,7 +411,7 @@ section:target {
 }
 /*mission 1 */
 
-/*mission 2 */
+/*mission2 */
 #indicateur pre{
     display: inline-block;
     border: 2px solid #5e493a;
@@ -506,7 +506,7 @@ section:target {
     border: 2px solid #000;
     padding: 8px;
 }
-/* mission 2*/
+/* mission2*/
 
 /* mission 3*/
 #Thème h3{
@@ -627,7 +627,7 @@ section:target {
         position: absolute;
         right: 0;
         top: 0;
-        background: #fff3cd;
+        background-color: rgb(221,221,221, 0.9) ;
     }
     .header_buttons {
         font-size: 16px;
@@ -698,6 +698,7 @@ section:target {
         margin: 20px 10px; /* Ajuster les marges pour les petits appareils */
     }
 }
+/* Responsive */
 
 /* Mission 4*/
 .ex{

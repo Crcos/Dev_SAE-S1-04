@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,32 +35,32 @@
     <h2>Sommaire</h2>
     <ul>
       <li><a href="#Contexte">1. Contexte </a> </li>
-      <li><a href="#1er Indicateur intéressant">2. 1er Indicateur intéressant pour KDou</a>
+      <li><a href="#1er_Indicateur_intéressant">2. 1er Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#1er Interprétation">2.1 Énoncé/Interprétation</a></li>
-          <li><a href="#1er resultat">2.2 Résultat</a></li>
-          <li><a href="#1er QBE/SQL">2.3 QBE/SQL</a></li>
+          <li><a href="#1er_Interprétation">2.1 Énoncé/Interprétation</a></li>
+          <li><a href="#1er_resultat">2.2 Résultat</a></li>
+          <li><a href="#1er_QBE/SQL">2.3 QBE/SQL</a></li>
         </ul>
       </li>
       <li><a href="#2ème_Indicateur_intéressant">3. 2ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#2ème Interprétation">3.1 Énoncé/Interprétation</a></li>
+          <li><a href="#2ème_Interprétation">3.1 Énoncé/Interprétation</a></li>
           <li><a href="#2ème_resultat">3.2 Résultat</a></li>
-          <li><a href="#2ème QBE/SQL">3.1 QBE/SQL</a></li>
+          <li><a href="#2ème_QBE/SQL">3.1 QBE/SQL</a></li>
         </ul>
       </li>
-      <li><a href="#3ème Indicateur intéressant">4. 3ème Indicateur intéressant pour KDou</a>
+      <li><a href="#3ème_Indicateur_intéressant">4. 3ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#3ème Interprétation">4.1 Énoncé/Interprétation</a></li>
-          <li><a href="#3ème resultat">4.2 Résultat</a></li>
-          <li><a href="#3ème QBE/SQL">4.3 QBE/SQL</a></li>
+          <li><a href="#3ème_Interprétation">4.1 Énoncé/Interprétation</a></li>
+          <li><a href="#3ème_resultat">4.2 Résultat</a></li>
+          <li><a href="#3ème_QBE/SQL">4.3 QBE/SQL</a></li>
         </ul>
       </li>
-      <li><a href="#4ème Indicateur intéressant">5. 4ème Indicateur intéressant pour KDou</a>
+      <li><a href="#4ème_Indicateur_intéressant">5. 4ème Indicateur intéressant pour KDou</a>
         <ul>
-          <li><a href="#4ème Interprétation">5.1 Énoncé/Interprétation</a></li>
-          <li><a href="#4ème resultat">5.2 Résultat</a></li>
-          <li><a href="#4ème QBE/SQL">5.3 QBE/SQL</a></li>
+          <li><a href="#4ème_Interprétation">5.1 Énoncé/Interprétation</a></li>
+          <li><a href="#4ème_resultat">5.2 Résultat</a></li>
+          <li><a href="#4ème_QBE/SQL">5.3 QBE/SQL</a></li>
         </ul>
       </li>
     </ul>
@@ -78,9 +78,10 @@
       </p>
     </section>
     <section id="indicateur">
-    <section id="1er Indicateur intéressant">
+      <h2>Les Indicateurs</h2>
+    <section id="1er_Indicateur_intéressant">
       <h2> 2. 1er Indicateur intéressant pour KDou</h2>
-      <div id="1er Interprétation">
+      <div id="1er_Interprétation">
         <h3>2.1 Énoncé/Interprétation</h3>
         <p>
           Quels sont les produits d’Italie ou d’Allemagne vendus 50€ ou
@@ -88,11 +89,11 @@
           d’origine.<br>Cette requête permet à l’entreprise de comparer rapidement une gamme de produit selon le pays et le prix de ces derniers.
         </p>
       </div>
-      <div id="1er resultat">
+      <div id="1er_resultat">
         <h3>2.2 Résultat</h3>
-        <div class="res1_mission2"><img src="../images/mission 2/1er_Résultat_Mission2.jpg" alt ="res1_mission2"></div>
+        <div class="res1_mission2"><img src="../images/mission2/1er_Résultat_Mission2.jpg" alt ="res1_mission2"></div>
       </div>
-      <div id="1er QBE/SQL">
+      <div id="1er_QBE/SQL">
         <h3>2.3 QBE/SQL</h3>
         <pre>
           <br> <br>SELECT Fournisseur.Pays, Fournisseur.Contact,<br>
@@ -100,15 +101,15 @@
           <br>FROM Fournisseur INNER JOIN Produit <br>
           ON Fournisseur.NoFour = Produit.NoFour
           <br>WHERE (((Fournisseur.Pays) Like "*Itaile*") <br>
-          AND ((Produit.PrixUnit<=50)) OR ((Fournisseur.Pays) <br>
-          Like "*Allemagne*") AND ((Produit.PrixUnit)<= 50));
+          AND ((Produit.PrixUnit&lt;=50)) OR ((Fournisseur.Pays) <br>
+          Like "*Allemagne*") AND ((Produit.PrixUnit)&lt;= 50));
         </pre>
       </div>
     </section>
 
     <section id="2ème_Indicateur_intéressant">
       <h2> 3. 2ème Indicateur intéressant pour KDou</h2>
-      <div id="2ème Interprétation">
+      <div id="2ème_Interprétation">
         <h3>3.1 Énoncé/Interprétation</h3>
         <p>
           Combien y a-t-il de clients nantais ? <br>
@@ -140,7 +141,7 @@
           on a que une case avec le chiffre "3".
         </p>
       </div>
-      <div id="2ème QBE/SQL">
+      <div id="2ème_QBE/SQL">
         <h3>3.3 QBE/SQL</h3>
         <pre>
           <br><br>SELECT Count(Client.ContactCli) AS CompteDeContactCli,<br>
@@ -153,9 +154,9 @@
       </div>
     </section>
 
-    <section id="3ème Indicateur intéressant">
+    <section id="3ème_Indicateur_intéressant">
       <h2> 4. 3ème Indicateur intéressant pour KDou</h2>
-      <div id="3ème Interprétation">
+      <div id="3ème_Interprétation">
         <h3>4.1 Énoncé/Interprétation</h3>
         <p>
           Est-ce qu’il y a dans la clientèle des clients qui n’ont pas encore passé de commande ?.<br>
@@ -165,7 +166,7 @@
 
         </p>
       </div>
-      <div id="3ème resultat">
+      <div id="3ème_resultat">
         <h3>4.2 Résultat</h3>
         <table class="tab_res3">
           <thead>
@@ -192,7 +193,7 @@
           </tbody>
         </table>
       </div>
-      <div id="3ème QBE/SQL">
+      <div id="3ème_QBE/SQL">
         <h3>4.3 QBE/SQL</h3>
         <pre>
           <br><br>SELECT Client.CodeCli, Client.SocieteCli,
@@ -204,9 +205,9 @@
       </div>
     </section>
 
-    <section id="4ème Indicateur intéressant">
+    <section id="4ème_Indicateur_intéressant">
       <h2> 5. 4ème Indicateur intéressant pour KDou</h2>
-      <div id="4ème Interprétation">
+      <div id="4ème_Interprétation">
         <h3>5.1 Énoncé/Interprétation</h3>
         <p>
           Dans quelles villes la clientèle est-elle la plus importante ? Citer les 3 premières. <br>
@@ -219,7 +220,7 @@
           une vision plus complète de l'importance stratégique de chaque zone géographique.
         </p>
       </div>
-      <div id="4ème resultat">
+      <div id="4ème_resultat">
         <h3>5.2 Résultat</h3>
         <table class="tab_res4">
         <thead>
@@ -244,9 +245,9 @@
         </tbody>
       </table>
       </div>
-      <div id="4ème QBE/SQL">
+      <div id="4ème_QBE/SQL">
         <h3>5.3 QBE/SQL</h3>
-        <div class="QBE4_mission2"><img src="../images/mission 2/4e_QBE_Mission2.jpg" alt ="QBE4_mission2"></div>
+        <div class="QBE4_mission2"><img src="../images/mission2/4e_QBE_Mission2.jpg" alt ="QBE4_mission2"></div>
       </div>
     </section>
     </section>
