@@ -146,9 +146,18 @@
           </div>
           <div id="2.1.aConstruction">
             <h4>Construction</h4>
-            <p>
-              const
-            </p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer les catégories de produit (CodeCateg)<br>
+              La table Fournisseur pour récupérer les informations sur les fournisseurs, dont le Pays.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et Fournisseur<br>
+              <strong>Filtrage des catégories:</strong><br>
+              On veut que les produits qui appartiennent au catégories 1 ou 3.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner CodeCateg et Pays. On ne veut pas de doublons.
+
+            </div>
           </div>
           <div id="2.1.aSQL">
             <h4>SQL</h4>
@@ -172,7 +181,21 @@
           </div>
           <div id="2.1.bConstruction">
             <h4>Construction</h4>
-            <p>Construction du 2ème indicateur</p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Catégorie pour récuperer les catégories de produit (CodeCateg)<br>
+              La table Produit pour récupérer le prix unitaire d'un produit (PrisUnit) et (CodeCateg).<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Catégorie et Produit. (par jointure)<br>
+              <strong>Agrégation:</strong><br>
+              On utilisera la fonction SUM qui calcul la somme des prix unitaires (PrixUnit).<br>
+              <strong>Regroupement:</strong><br>
+              GROUP BY regroupe les résultats par rapport au CodeCateg de la table Categorie.<br>
+              <strong>Filtrage:</strong><br>
+              Avec HAVING, permet de limiter les résultats aux catégories qui appartiennent au catégories égal à 1 ou 3.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner les catégories 1 et 3 avec leur chiffre d'affaire. (La somme des prix unitaires pour chaque catégorie.)
+            </div>
           </div>
           <div id="2.1.bSQL">
             <h4>SQL</h4>
@@ -197,16 +220,26 @@
           <div id="2.2.aEnoncé">
             <h4>Enoncé</h4>
             <p>
-              interprétation
+              Donner des informations sur les fournisseurs qui proposent des produits qui ne sont pas
+              commandés actuellement ?
             </p>
           </div>
           <div id="2.2.aConstruction">
             <h4>Construction</h4>
-            <p>
-              KDou se demande ce qu’il faut changer dans son offre, voici quelques indicateurs ?
-              Donner des informations sur les fournisseurs qui proposent des produits qui ne sont pas
-              commandés actuellement ?
-            </p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer les références des produits (RefProd).<br>
+              La table DetailCommande pour récuperer les références des produits dans la commande (RefProd).<br>
+              La table Fournisseur pour récupérer les informations des fournisseurs, dont Contact, sa Fonction et son identifiant (NoFour).<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et Fournisseur, NoFour. (par jointure)<br>
+              <strong>Filtrage:</strong><br>
+              Avec WHERE et NOT IN, on veut les réferences des produits qui n'ont pas été commandées (qui ne sont pas dans DetailCommande).<br>
+              <strong>Sous requête:</strong><br>
+              Tous les références de produit dans la table DetailCommande.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner le Contact et la Fonction des fournisseurs. On ne veut pas de doublons.<br>
+            </div>
           </div>
           <div id="2.2.aSQL">
             <h4>SQL</h4>
@@ -232,7 +265,19 @@
           </div>
           <div id="2.2.bConstruction">
             <h4>Construction</h4>
-            <p>Construction du 2ème indicateur</p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer les références des produits (RefProd).<br>
+              La table Fournisseur pour récupérer les informations des fournisseurs, dont le Pays.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et Fournisseur, NoFour. (par jointure)<br>
+              <strong>Agrégation:</strong><br>
+              COUNT qui compte le nombre des références de produit.<br>
+              <strong>Filtrage par regroupement:</strong><br>
+              On utilise GROUP BY pour regrouper les résultats par rapport au Pays dans la table Fournisseur.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner le Pays dans la table Fournisseur et le nombre de Produit par rapport au Pays.<br>
+            </div>
           </div>
           <div id="2.2.bSQL">
             <h4>SQL</h4>
@@ -264,6 +309,18 @@
           </div>
           <div id="2.3.aConstruction">
             <h4>Construction</h4>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer l'identifiant NoFour et CodeCateg.<br>
+              La table Fournisseur pour récupérer les informations des fournisseurs, dont le nom de la société.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et Fournisseur, NoFour. (par jointure)<br>
+              Il existe une autre relation, entre Catégorie et Produit, CodeCateg (par jointure).<br>
+              <strong>Filtrage:</strong><br>
+              Avec WHERE, on sélectionne ceux où les noms des catégories sont Boissons ou Desserts dans la table Catégorie.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner le nom de la société de la table Fournisseur.<br>
+            </div>
           </div>
           <div id="2.3.aSQL">
             <h4>SQL</h4>
@@ -290,7 +347,20 @@
           </div>
           <div id="2.3.bConstruction">
             <h4>Construction</h4>
-            <p>Construction du 2ème indicateur</p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer l'identifiant NoFour et CodeCateg.<br>
+              La table Fournisseur pour récupérer les informations des fournisseurs, dont le nom de la société.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et Fournisseur, NoFour. (par jointure)<br>
+              Il existe une autre relation, entre Catégorie et Produit, CodeCateg (par jointure).<br>
+              <strong>Filtrage:</strong><br>
+              Avec WHERE et IN, on veut sélectionner ceux où les noms des catégories sont Boissons ou Desserts compris dans l'ensemble de la table Catégorie.<br>
+              Par regroupement avec GROUP BY, on regroupe en fonction du nom de la société de la table Fournisseur.<br>
+              Le HAVING COUNT utilisée permet d'avoir en résultat que les fournisseurs qui proposent deux catégories dont Boissons et Desserts.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner le nom de la société de la table Fournisseur. On ne veut pas de doublons.<br>
+            </div>
           </div>
           <div id="2.3.bSQL">
             <h4>SQL</h4>
@@ -318,24 +388,36 @@
           <div id="2.4.aEnoncé">
             <h4>Enoncé</h4>
             <p>
-              Un client nantais Le verre à soi souhaite savoir quels autres clients nantais
-              commandent aussi des produits en Allemagne pour envisager de futures livraisons
-              groupées.
+              Certains clients n’ont jamais eu la remise la plus importante de 25%. Qui sont-ils ?
             </p>
           </div>
           <div id="2.4.aConstruction">
             <h4>Construction</h4>
-            <p>
-              const
-            </p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Client pour récuperer les informations des Clients, dont le code et la société du client.<br>
+              La table Commande pour récupérer l'identifiant de la commande (NoCom) et CodeCli.<br>
+              La table DetailCommande pour récupérer NoCom et la Remise.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Client et Commande, CodeCli. (par jointure)<br>
+              <strong>Filtrage:</strong><br>
+              Avec WHERE et NOT IN, on ne veut pas numéro de commande de la table Commande dont les remises est égales à 25% de la table DetailCommande.<br>
+              <strong>Sous-requête:</strong><br>
+              Les commandes dont la remise est à 25% est à exclure.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner le code et la société client de la table Client. On ne veut pas de doublons.<br>
+            </div>
           </div>
           <div id="2.4.aSQL">
             <h4>SQL</h4>
             <div class="div_avec_bordure">
-              SELECT DISTINCT Client.VilleCli, Client.SocieteCli, Fournisseur.Pays<br>
-              FROM Client, Fournisseur<br>
-              WHERE (((Client.VilleCli)="nantes") AND ((Client.SocieteCli)&lt;&gt;"verre de soi") AND<br>
-              ((Fournisseur.Pays)="Allemagne"));<br>
+              SELECT DISTINCT Client.CodeCli, Client.SocieteCli<br>
+              FROM Client INNER JOIN Commande ON Client.CodeCli=Commande.CodeCli<br>
+              WHERE Commande.NoCom NOT IN (SELECT DetailCommande.NoCom<br>
+              FROM DetailCommande<br>
+              WHERE DetailCommande.Remise=25)<br>
+              ORDER BY 1, 2;<br>
+
             </div>
           </div>
           <div id="2.4.aRésultat">
@@ -353,7 +435,19 @@
           </div>
           <div id="2.4.bConstruction">
             <h4>Construction</h4>
-            <p>Construction du 2ème indicateur</p>
+            <div class="construction">
+              <strong>Données nécessaires:</strong><br>
+              La table Produit pour récuperer les références de produit (RefProd) et le nom des produits (NomProd).<br>
+              La table DetailCommande pour récupérer RefProd et la Remise.<br>
+              <strong>Relations:</strong><br>
+              Il existe une relation entre les tables Produit et DetailCommande, RefProd. (par jointure)<br>
+              <strong>Filtrage:</strong><br>
+              Avec WHERE et NOT IN, on ne veut pas les références de produit de la table Produit dont les remises sont égales à 0% ou 10% ou 20% de la table DetailCommande.<br>
+              <strong>Sous-requête:</strong><br>
+              Les commandes dont la remise est à 0% ou 10% ou 20% est à exclure.<br>
+              <strong>Résultat attendu:</strong><br>
+              La requête doit retourner les références de produit et leur nom. On ne veut pas de doublons.<br>
+            </div>
           </div>
           <div id="2.4.bSQL">
             <h4>SQL</h4>
@@ -362,8 +456,7 @@
               FROM Produit<br>
               INNER JOIN DetailCommande ON Produit.RefProd =<br>
               DetailCommande.RefProd<br>
-              WHERE Produit.RefProd NOT IN (<br>
-              SELECT DetailCommande.RefProd<br>
+              WHERE Produit.RefProd NOT IN (SELECT DetailCommande.RefProd<br>
               FROM DetailCommande<br>
               WHERE DetailCommande.Remise NOT IN (0,0.1,0.2))<br>
               ORDER BY 1,2 ;<br>

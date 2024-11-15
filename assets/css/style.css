@@ -512,6 +512,7 @@ section:target {
 /* mission2*/
 
 /* mission 3*/
+
 #Thème h3{
     font-size: 30px;
     letter-spacing: 2px;
@@ -526,7 +527,7 @@ section:target {
 #Thème .div_avec_bordure{
     display: inline-block;
     border: 2px solid #5e493a;
-    width: 35%;
+    width: auto;
     padding: 10px;
     max-width: fit-content;
 }
@@ -535,6 +536,15 @@ section:target {
     max-width: 300px;
     height: auto;
     display: block;
+}
+
+ .construction{
+    font-size: 15px;
+    display: inline-block;
+    border: 2px solid #5e493a;
+    width: auto;
+    padding: 20px;
+    max-width: fit-content;
 }
 /* mission 3*/
 
@@ -672,6 +682,10 @@ section:target {
     #Thème .div_avec_bordure {
         width: 80%;
     }
+    /* Mission 3*/
+    .construction{
+        width: 80%;
+    }
     .footer-section {
         min-width: 100%;
         text-align: center;
@@ -729,6 +743,11 @@ section:target {
 
 }
 /* Responsive */
+
+/* Mission 3*/
+.construction{
+    width: 80%;
+}
 
 /* Mission 4*/
 .ex{
