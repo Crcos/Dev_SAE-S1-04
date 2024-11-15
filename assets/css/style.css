@@ -6,7 +6,9 @@
      box-sizing: border-box;
      font-family: 'Roboto Light', sans-serif;
 }
- /* scrollbar */
+
+
+/* scrollbar */
  ::-webkit-scrollbar {
      width: 8px;
  }
@@ -49,9 +51,10 @@
      font-weight: 500;
  }
  .header_menu{
-     top: 100%;
+     /* top: 100%; */
      display: flex;
      font-size: 16px;
+     transition: transform 0.3s ease; /* Ajouté */
  }
  .header_menu a{
      margin-left: 20px;
@@ -127,6 +130,7 @@
      padding-bottom: 50vh;
      box-sizing: border-box;
      height: 50vh;           /* Prend toute la hauteur de la page */
+     text-shadow: black 3px 3px 2px;
 
  }
  .intro{
@@ -151,7 +155,16 @@
  }
 
  /* home fin */
+/* Styles pour le menu hamburger */
+.burger-icon {
+    display: none; /* Caché par défaut */
+    font-size: 30px;
+    cursor: pointer;
+}
 
+#burger-toggle {
+    display: none;
+}
  /* presentation image*/
  .presentation {
      padding: 20px 8%;
@@ -620,6 +633,8 @@ section:target {
 /* footer */
 
 
+
+
 /* Responsive */
 @media screen and (max-width: 900px) {
     .header_menu {
@@ -627,11 +642,40 @@ section:target {
         position: absolute;
         right: 0;
         top: 0;
-        background-color: rgb(221,221,221, 0.9) ;
+        background-color: rgb(221,221,221, 0.9);
+    }
+    .header_menu a {
+        padding: 10px; /* Ajout de padding pour de meilleures cibles tactiles */
+        display: block;
+        margin: 7px 0;
     }
     .header_buttons {
         font-size: 16px;
     }
+    /* Afficher le menu avec animation lorsque le burger est coché */
+    #burger-toggle:checked ~ .menu_nav {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Faire glisser vers le bas en douceur */
+    }
+
+    /* Style de l'icône hamburger */
+    .burger-icon {
+        border-radius: 15px;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 20px;
+        color: #333;
+        transition: color 0.3s ease;
+        z-index: 10000;
+    }
+    /* Changement de couleur au survol de l'icône burger */
+    .burger-icon:hover {
+        color: #555;
+    }
+
     .title {
         font-size: 60px;
     }
@@ -647,10 +691,6 @@ section:target {
     nav {
         position: absolute;
         width: 100%;
-    }
-    .header_menu a {
-        margin-left: 0;
-        padding: 10px; /* Ajout de padding pour de meilleures cibles tactiles */
     }
     .title {
         font-size: 40px;
@@ -696,6 +736,33 @@ section:target {
     }
     .contenu {
         margin: 20px 10px; /* Ajuster les marges pour les petits appareils */
+    }
+}
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Montre l'icône du menu burger */
+    }
+
+    .header_menu {
+        display: none; /* Cache le menu principal */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+
+    .header_menu a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Afficher le menu si le burger est activé */
+    #menu-toggle:checked ~ .header_menu {
+        display: flex; /* Affiche le menu */
     }
 }
 /* Responsive */
