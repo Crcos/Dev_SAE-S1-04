@@ -155,16 +155,6 @@
  }
 
  /* home fin */
-/* Styles pour le menu hamburger */
-.burger-icon {
-    display: none; /* Caché par défaut */
-    font-size: 30px;
-    cursor: pointer;
-}
-
-#burger-toggle {
-    display: none;
-}
  /* presentation image*/
  .presentation {
      padding: 20px 8%;
@@ -652,29 +642,6 @@ section:target {
     .header_buttons {
         font-size: 16px;
     }
-    /* Afficher le menu avec animation lorsque le burger est coché */
-    #burger-toggle:checked ~ .menu_nav {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0); /* Faire glisser vers le bas en douceur */
-    }
-
-    /* Style de l'icône hamburger */
-    .burger-icon {
-        border-radius: 15px;
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: 20px;
-        color: #333;
-        transition: color 0.3s ease;
-        z-index: 10000;
-    }
-    /* Changement de couleur au survol de l'icône burger */
-    .burger-icon:hover {
-        color: #555;
-    }
 
     .title {
         font-size: 60px;
@@ -760,10 +727,6 @@ section:target {
         text-align: center;
     }
 
-    /* Afficher le menu si le burger est activé */
-    #menu-toggle:checked ~ .header_menu {
-        display: flex; /* Affiche le menu */
-    }
 }
 /* Responsive */
 
