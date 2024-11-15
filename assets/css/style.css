@@ -451,20 +451,20 @@ section:target {
     border: 2px solid #000;
     padding: 8px;
 }
-[id="3ème resultat"] table{
+[id="3ème_resultat"] table{
     width: 75%;
     border-collapse: collapse;
     margin-bottom: 20px;
     margin-top: 20px;
 }
-[id="3ème resultat"] table thead th{
+[id="3ème_resultat"] table thead th{
     color: black;
     text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
 
 }
-[id="3ème resultat"] table tbody td{
+[id="3ème_resultat"] table tbody td{
     color: #5e493a;
     text-align: left;
     font-size: 20px;
@@ -472,28 +472,28 @@ section:target {
     font-weight: bold;
 
 }
-[id="3ème resultat"] table tbody td:hover{ /* quand on passe la souris ça change de couleur. */
+[id="3ème_resultat"] table tbody td:hover{ /* quand on passe la souris ça change de couleur. */
     color: #333333;
 }
-[id="3ème resultat"] table tr, table td{
+[id="3ème_resultat"] table tr, table td{
     border-collapse: collapse;
     border: 2px solid #000;
     padding: 8px;
 }
-[id="4ème resultat"] table{
+[id="4ème_resultat"] table{
     width: 25%;
     border-collapse: collapse;
     margin-bottom: 20px;
     margin-top: 20px;
 }
-[id="4ème resultat"] table thead th{
+[id="4ème_resultat"] table thead th{
     color: black;
     text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
 
 }
-[id="4ème resultat"] table tbody td{
+[id="4ème_resultat"] table tbody td{
     color: #5e493a;
     text-align: left;
     font-size: 20px;
@@ -501,10 +501,10 @@ section:target {
     font-weight: bold;
 
 }
-[id="4ème resultat"] table tbody td:hover{ /* quand on survole à la souris ça change de couleur */
+[id="4ème_resultat"] table tbody td:hover{ /* quand on survole à la souris ça change de couleur */
     color: #333333;
 }
-[id="4ème resultat"] table tr, table td{
+[id="4ème_resultat"] table tr, table td{
     border-collapse: collapse;
     border: 2px solid #000;
     padding: 8px;
